@@ -1,0 +1,64 @@
+* DIRINFO
+
+I continue to find myself stuck on corporate machines one which the
+only programming language I am allowed to use is Windows batch....
+
+dirinfo.bat creates a little report about directories.
+
+For a given directory A, with top-level subdirectories B, C and D, it
+will report on the size of B, C and D, the number of files within them
+(down all sub-levels) and the number of subdirectories (down all
+sublevels).  Output is not pretty, but is intended to be easy to cut
+and paste into an org-mode buffer usefully.  Example output:
+
+#+BEGIN_EXAMPLE 
+c:\Users\evansw\workspace>dirinfo.bat c:\Users\evansw\cloud
+
+Beginning process for ... c:\Users\evansw\cloud
+Total objects ........... 656
+Total subdirectories ..... 174
+Total files ............. 486
+Total size .............. 284218187
+
+| DIR   | SUBDIRS | FILES | SIZE |
+|--------------------------------
+| decks | 0| 11| 1633883
+| emacs | 2| 19| 131091
+| finale-convert | 1| 45| 5204238
+| gnus | 6| 60| 2367471
+| greekanthology | 1| 23| 228720792
+| grk-anth | 0| 6| 291734
+| invention | 0| 7| 196048
+| org | 1| 20| 136033
+| organon | 0| 19| 363078
+| piano-sets | 97| 184| 398898
+| resume | 36| 48| 36541
+| sonata95 | 0| 1| 1815062
+| tonerow | 16| 26| 33820
+| two-jokes-for-four-hands | 0| 4| 268879
+
+CLEANING UP .............. Done.
+#+END_EXAMPLE
+
+Add the final pipe characters in an org-mode buffer and --
+
+
+| DIR                      | SUBDIRS | FILES |      SIZE |
+|--------------------------+---------+-------+-----------|
+| decks                    |       0 |    11 |   1633883 |
+| emacs                    |       2 |    19 |    131091 |
+| finale-convert           |       1 |    45 |   5204238 |
+| gnus                     |       6 |    60 |   2367471 |
+| greekanthology           |       1 |    23 | 228720792 |
+| grk-anth                 |       0 |     6 |    291734 |
+| invention                |       0 |     7 |    196048 |
+| org                      |       1 |    20 |    136033 |
+| organon                  |       0 |    19 |    363078 |
+| piano-sets               |      97 |   184 |    398898 |
+| resume                   |      36 |    48 |     36541 |
+| sonata95                 |       0 |     1 |   1815062 |
+| tonerow                  |      16 |    26 |     33820 |
+| two-jokes-for-four-hands |       0 |     4 |    268879 |
+
+
+Ain’t that grand?
